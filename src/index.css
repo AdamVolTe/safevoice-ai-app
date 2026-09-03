@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #020617;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: fadeSlideIn 0.5s ease-out;
+  }
+
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scan-line {
+    animation: scanLine 2s linear infinite;
+  }
+
+  @keyframes scanLine {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .scanning-bar {
+    animation: scanningBar 2.5s ease-in-out infinite;
+  }
+
+  @keyframes scanningBar {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 70%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
